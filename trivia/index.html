@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Funktion, die aufgerufen wird, wenn ein Button geklickt wird
+            function checkAnswer(buttonId) {
+                // Überprüfe, ob die ID des geklickten Buttons der richtigen Antwort entspricht
+                if (buttonId === '1per5') {
+                    // Falls korrekt, färbe den Button grün und gib "Correct" aus
+                    document.getElementById(buttonId).style.backgroundColor = 'green';
+                    document.getElementById('result').textContent = 'Correct';
+                } else {
+                    // Falls falsch, färbe den Button rot und gib "Incorrect" aus
+                    document.getElementById(buttonId).style.backgroundColor = 'red';
+                    document.getElementById('result').textContent = 'Incorrect';
+                }
+            }
+
+            function checkLand(){
+                let response = document.getElementById('response');
+                if (response.value == 'Switzerland'){
+                    document.getElementById('land_result').textContent = 'Correct';
+                    response.style.backgroundColor = 'green';
+                } else {
+                    document.getElementById('land_result').textContent = 'Inorrect';
+                    response.style.backgroundColor = 'red';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the approximate ratio of people to sheep in New Zealand</h3>
+                <button type="button" id="5per1" onclick="checkAnswer('5per1')">5 people per 1 sheep</button>
+                <button type="button" id="3per1" onclick="checkAnswer('3per1')">3 people per 1 sheep</button>
+                <button type="button" id="1per1" onclick="checkAnswer('1per1')">1 people per 1 sheep</button>
+                <button type="button" id="1per3" onclick="checkAnswer('1per3')">1 people per 3 sheep</button>
+                <button type="button" id="1per5" onclick="checkAnswer('1per5')">1 people per 5 sheep</button>
+
+                <p id="result"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>In which country is it illegal to own only one guinea ig, as a lone guinea pig might get lonely</h3>
+                <input id="response" spaceholder="Your Answer">
+                <button type="submit" onclick="checkLand()">Submit</button>
+
+                <p id="land_result"></p>
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{
+    "gitdoc.enabled": true,
+    "files.associations": {
+        "array": "c",
+        "deque": "c",
+        "string": "c",
+        "unordered_map": "c",
+        "vector": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "cmath": "c",
+        "dictionary.h": "c",
+        "stdint.h": "c",
+        "stdbool.h": "c"
+    }
+}

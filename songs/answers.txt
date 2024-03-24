@@ -1,0 +1,5 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+answer: The user has a preference for energetic music suitable for dancing. This is evident with a score of 0.65906 for energy and a score of 0.71646 for danceability. However, the valence, at 0.484443, is below 0.5.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+answer: To calculate the aura, additional metrics such as the artist, loudness, and tempo would be useful. Additionally, using the median instead of the mean could be beneficial to reduce the impact of outliers.

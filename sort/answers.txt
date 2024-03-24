@@ -1,0 +1,19 @@
+sort1 uses: Bubble sort
+Random 50000: 5,074s
+Reversed 50000: 4,901s
+sorted 50000: 0,349s
+
+How do you know?: Because the best and the worst running time differs a lot from each other so the upper bound is n^2 (~5,074s) and the lower bound is n (~0,349s)
+
+sort2 uses: Merge sort
+Random 50000: 0,384s
+Reversed 50000: 0,388s
+sorted 50000: 0,322s
+
+How do you know?: All of the times are almost the same and much faster then for Selection Sort (~0,38s).
+sort3 uses: Selection Sort
+Random 50000: 2,222s
+Reversed 50000: 2,050s
+sorted 50000: 2,088s
+
+How do you know?: All the times are almoste the same but slower than Merge sort. (~ 2,1s).

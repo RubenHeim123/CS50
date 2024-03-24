@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for share in shares %}
+            <tr class="{{ get_row_color(share['shares']) }}">
+                <td>{{ share["symbol"] }}</td>
+                <td>{{ share["share_name"] }}</td>
+                <td>{{ share["price"] }}</td>
+                <td>{{ share["shares"] }}</td>
+                <td>{{ share["timestamp"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
